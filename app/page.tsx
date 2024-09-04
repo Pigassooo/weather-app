@@ -85,7 +85,7 @@ export default function Home() {
           Made by
           <Image src={"/logo-white.svg"} alt="logo" width={20} height={20} />
           <a
-            href="https://thecodedealer.com"
+            href="https://github.com/Pigassooo"
             target="_blank"
             className=" text-green-300 font-bold"
           >

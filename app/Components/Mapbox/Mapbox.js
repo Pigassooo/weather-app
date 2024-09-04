@@ -1,16 +1,10 @@
-"use client";
-import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
-import { useMap } from "react-leaflet"; // 确保 useMap 正确导入
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 import { useGlobalContext } from "@/app/context/globalContext";
 
-// 动态导入 MapContainer 和 TileLayer，禁用 SSR
-const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
-import "leaflet/dist/leaflet.css";
-
 function FlyToActiveCity({ activeCityCords }) {
-  const map = useMap(); // 确保这里正确使用 useMap
+  const map = useMap();
 
   useEffect(() => {
     if (activeCityCords) {
