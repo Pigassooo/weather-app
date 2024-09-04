@@ -23,7 +23,7 @@ function Navbar() {
           <Button
             className="source-code-btn flex items-center gap-2"
             onClick={() => {
-              window.location.href = 'https://github.com/Pigassooo';
+              if (typeof window !== "undefined"){window.location.href = 'https://github.com/Pigassooo';}
             }}
           >
             {github} Pigasso
